@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Group work</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="row1">
+            <!--3 columns, center column holds title-->
+            <div class="col"></div>
+            <div class="col-xlg-7 col-lg-8 col-md-11 col-sm-12" id="title">
+                Task Manager
+                <h4>Organize your world.</h4>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row" id="row2">
+            <!--3 columns, center column holds task form-->
+            <div class="col"></div>
+            <div class="col-xlg-6 col-lg-6 col-md-9 col-sm-12" id="form-header">
+                <div class="header">
+                    <h3 class="font-weight-bold" style="text-align:center;">New Task</h3>
+                </div>
+
+                <div class="alert alert-danger" id="error-display"></div>
+                <form class="form-group" id="form">
+
+                    <label for="Name" class="font-weight-bold">Task Name</label>
+                    <input type="text" name="task-name" id="taskName" placeholder="Name of new Task"
+                        class="form-control ">
+
+                    <br>
+
+                    <label for="Description" class="font-weight-bold ">Task Description</label>
+                    <textarea name="description" id="description" placeholder="Task Description"
+                        class="form-control"></textarea>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="assigned" class="font-weight-bold">Assigned To:</label>
+                            <input type="text" name="Assigned" id="assigned" placeholder="Who is doing this task?"
+                                class="form-control">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="date" class="font-weight-bold">Due Date</label>
+                            <input type="date" name="dueDate" id="date" class="form-control">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="status"></label>
+                        <input type="text" id="status" name="status">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block  btn-lg" id="subAddTask">Add Task</button>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <section id="task-display">
+            <div class="task-card-display containerR">
+                <ul id="list-container" class="list-group-horizontal-lg d-flex flex-wrap">
+
+                </ul>
+            </div>
+
+
+        </section>
+    </div>
+    <script type='text/javaScript' src="./js/taskManager.js"></script>
+    <script type='text/javaScript' src="./js/index.js"> </script>
+    <script type='text/javaScript' src="./test/test.js"> </script>
+</body>
+
+</html>
